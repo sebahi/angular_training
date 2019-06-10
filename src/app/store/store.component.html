@@ -2,10 +2,24 @@
   <span>SPORTS STORE</span>
 </div>
 <div id="wrapper">
-  <div id="left">
-    <p>{{ categories.length }}</p>
+  <div id="categories">
+    <p>{{ categories.length }} Categories</p>
   </div>
-  <div id="right">
-    <p>{{ products.length }}</p>
+  <div id="products">
+    <div *ngFor="let product of products" id="product">
+      <mat-card id="card">
+        <mat-card-title>
+          <div id="price_title">
+            <div id="part1">
+              {{ product.id }}
+            </div>
+            <div id="part2">
+              {{ product.price }}
+            </div>
+          </div>
+        </mat-card-title>
+        {{ product.description }}
+      </mat-card>
+    </div>
   </div>
 </div>

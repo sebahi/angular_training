@@ -11,6 +11,13 @@ span {
   color: white;
   font-weight: 200;
 }
+
+#card {
+  padding-bottom: 5px;
+}
+#product {
+  padding-bottom: 5px;
+}
 #wrapper {
   display: flex;
   margin-left: 20px;
@@ -18,18 +25,24 @@ span {
   height: auto;
 }
 
-#left {
-  flex: 0 0 30%;
+#categories {
+  width: 30%;
   background-color: rgb(174, 199, 199);
-  p {
-    padding-left: 10px;
-  }
 }
 
-#right {
-  flex: 70%;
+#products {
+  width: 70%;
   background-color: lightgrey;
-  p {
-    padding-left: 10px;
-  }
+  padding: 5px;
+}
+
+#price_title {
+  display: flex;
+}
+
+#part1 {
+  width: 90%;
+}
+#part2 {
+  width: 10%;
 }
