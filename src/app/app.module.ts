@@ -4,12 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material'
+import { MaterialModule } from './material';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, StoreComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,4 +18,4 @@ import { MaterialModule } from './material'
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
