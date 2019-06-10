@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
-import { StoreComponent } from './store/store.component';
+import { StoreModule } from './store/store.module';
 
 @NgModule({
-  declarations: [AppComponent, StoreComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
