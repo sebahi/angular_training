@@ -3,22 +3,33 @@
 </div>
 <div id="wrapper">
   <div id="categories">
-    <p>{{ categories.length }} Categories</p>
+    <button mat-button (click)="changeCategory()">
+      Home
+    </button>
+    <button *ngFor="let cat of categories" (click)="changeCategory(cat)">
+      {{ cat }}
+    </button>
   </div>
   <div id="products">
     <div *ngFor="let product of products" id="product">
       <mat-card id="card">
-        <mat-card-title>
-          <div id="price_title">
-            <div id="part1">
-              {{ product.id }}
+        <mat-card-header
+          [ngStyle]="{ 'background-color': 'lightGray', 'padding-top': '10px' }"
+        >
+          <mat-card-title>
+            <div id="price_title">
+              <div id="part1">
+                {{ product.id }}
+              </div>
+              <div id="part2">
+                {{ product.price | currency: 'USD' }}
+              </div>
             </div>
-            <div id="part2">
-              {{ product.price }}
-            </div>
-          </div>
-        </mat-card-title>
-        {{ product.description }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-subtitle id="description">
+          {{ product.description }}
+        </mat-card-subtitle>
       </mat-card>
     </div>
   </div>
